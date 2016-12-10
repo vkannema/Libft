@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_free_join.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vkannema <vkannema@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 17:23:45 by vkannema          #+#    #+#             */
-/*   Updated: 2016/12/10 10:37:33 by vkannema         ###   ########.fr       */
+/*   Created: 2016/12/10 10:43:10 by vkannema          #+#    #+#             */
+/*   Updated: 2016/12/10 10:48:16 by vkannema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+char	*ft_free_join(char *dest, char *buff, int i)
 {
-	if (s && f)
+	char	*tmp;
+
+	if (!(tmp = ft_strjoin(dest, buff)))
+		return (NULL);
+	if (i == 1)
+		free(dest);
+	if (i == 2)
+		free(buff);
+	if (i == 0)
 	{
-		while (*s)
-		{
-			f(s);
-			s++;
-		}
+		free(dest);
+		free(buff);
 	}
+	dest = NULL;
+	return (tmp);
 }

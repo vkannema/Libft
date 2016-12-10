@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vkannema <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vkannema <vkannema@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 11:50:45 by vkannema          #+#    #+#             */
-/*   Updated: 2016/11/30 11:58:32 by vkannema         ###   ########.fr       */
+/*   Updated: 2016/12/10 10:49:40 by vkannema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+# include <fcntl.h>
+# define BUFF_SIZE 32
 
-typedef struct		s_lit
+typedef struct		s_list
 {
 	void			*content;
 	size_t			content_size;
-	struct s_lit	*next;
+	struct s_list	*next;
 }					t_list;
 
 int					ft_atoi(char *str);
@@ -85,5 +87,7 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 size_t				ft_lstlen(t_list *alst);
 void				ft_lstrev(t_list **begin_list);
+int					get_next_line(const int fd, char **line);
+char				*ft_free_join(char *dest, char *buff, int i);
 
 #endif

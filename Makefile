@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vkannema <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: vkannema <vkannema@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 15:34:02 by vkannema          #+#    #+#              #
-#    Updated: 2016/11/30 11:59:16 by vkannema         ###   ########.fr        #
+#    Updated: 2016/12/10 10:44:26 by vkannema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,9 @@ SRC = ft_atoi.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
 	ft_lstlen.c \
-	ft_lstrev.c
+	ft_lstrev.c \
+	get_next_line.c \
+	ft_free_join.c
 
 OBJECTS = $(SRC:.c=.o)
 
@@ -81,12 +83,14 @@ FLAG = -Wextra -Werror -Wall
 all: $(NAME)
 
 $(NAME):
-			gcc $(FLAG) -c $(SRC)
-			ar rc $(NAME) $(OBJECTS)
-			ranlib $(NAME)
-
+			@gcc $(FLAG) -c $(SRC)
+			@ar rc $(NAME) $(OBJECTS)
+			@ranlib $(NAME)
+			@echo "libft done"
 clean:
-			/bin/rm -f $(OBJECTS)
+			@/bin/rm -f $(OBJECTS)
+			@echo "Objects deleted"
 fclean: clean
-			/bin/rm -f $(NAME)
+			@/bin/rm -f $(NAME)
+			@echo "Libft.a deleted"
 re: fclean all
