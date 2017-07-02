@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlen.c                                        :+:      :+:    :+:   */
+/*   ft_putoctal.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vkannema <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vkannema <vkannema@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/30 12:00:07 by vkannema          #+#    #+#             */
-/*   Updated: 2016/11/30 12:00:19 by vkannema         ###   ########.fr       */
+/*   Created: 2016/12/15 21:19:26 by vkannema          #+#    #+#             */
+/*   Updated: 2017/01/19 12:03:27 by vkannema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
-size_t	ft_lstlen(t_list *alst)
+void	ft_putoctal(unsigned long long nb)
 {
-	size_t	i;
-	t_list	*tmp;
+	size_t		beg;
+	size_t		end;
+	const char	*base;
 
-	i = 1;
-	if (alst == NULL)
-		return (0);
-	tmp = alst;
-	while (tmp != NULL)
-	{
-		tmp = tmp->next;
-		i++;
-	}
-	return (i);
+	base = "01234567";
+	end = nb % 8;
+	beg = (nb - end) / 8;
+	if (beg)
+		ft_putoctal(beg);
+	ft_putchar(base[end]);
 }

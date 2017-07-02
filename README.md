@@ -36,7 +36,7 @@ memcmp		| ft_striteri	|				| ft_realloc
 strlen		| ft_strmap		|				| ft_strjoinch
 strdup		| ft_strmapi	|				| ft_strnchr
 strcpy		| ft_strequ		|				| ft_copyuntil
-strncpy		| ft_strnequ	|			| ft_strstartswith
+strncpy		| ft_strnequ	|			| [ft_printf functions][4]
 strcat		| ft_strsub		| | ft_intlen
 strlcat		| ft_strjoin	| | ft_strendswith
 strchr		| ft_strtrim	| | ft_pathjoin
@@ -117,3 +117,4 @@ That's it! If you're having some problems, just [send me a tweet][2]. If you thi
 [1]: https://github.com/alelievr/libft-unit-test
 [2]: https://twitter.com/kannemacher
 [3]: https://github.com/vkannema/libft/issues
+[4]: https://github.com/vkannema/ft_printf

@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_create_elem.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vkannema <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vkannema <vkannema@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/02 16:49:26 by vkannema          #+#    #+#             */
-/*   Updated: 2016/11/10 13:43:41 by vkannema         ###   ########.fr       */
+/*   Created: 2016/08/23 13:05:11 by vkannema          #+#    #+#             */
+/*   Updated: 2017/04/21 14:40:28 by vkannema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+t_list	*ft_create_elem(void *data)
 {
-	size_t i;
+	t_list *new_elem;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	new_elem = malloc(sizeof(*new_elem));
+	new_elem->next = 0;
+	new_elem->content = data;
+	new_elem->content_size = sizeof(data);
+	return (new_elem);
 }

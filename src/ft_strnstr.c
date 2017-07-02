@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vkannema <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vkannema <vkannema@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 15:38:42 by vkannema          #+#    #+#             */
-/*   Updated: 2016/11/11 12:24:47 by vkannema         ###   ########.fr       */
+/*   Updated: 2017/01/16 17:58:06 by vkannema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	while (str[i] && len > 0)
 	{
 		j = 0;
-		if (len < ft_strlen((char *)to_find))
+		if (len < (size_t)ft_strlen((char *)to_find))
 			return (NULL);
 		ind = i;
 		while (str[ind] == to_find[j] && to_find[j] && str[ind])

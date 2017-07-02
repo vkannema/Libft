@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vkannema <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vkannema <vkannema@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/02 16:46:22 by vkannema          #+#    #+#             */
-/*   Updated: 2016/11/09 17:09:42 by vkannema         ###   ########.fr       */
+/*   Created: 2016/12/21 21:26:09 by vkannema          #+#    #+#             */
+/*   Updated: 2017/01/07 08:26:20 by vkannema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
-void	ft_putstr(char *str)
+int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	if (str)
-	{
-		while (str[i] != '\0')
-		{
-			ft_putchar(str[i]);
-			i++;
-		}
-	}
+	while (str[i])
+		i++;
+	return (i);
 }

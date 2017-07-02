@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit_str.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vkannema <vkannema@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 17:23:45 by vkannema          #+#    #+#             */
-/*   Updated: 2016/12/10 10:37:33 by vkannema         ###   ########.fr       */
+/*   Created: 2017/04/26 11:13:51 by vkannema          #+#    #+#             */
+/*   Updated: 2017/04/26 11:17:29 by vkannema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+int	ft_isdigit_str(char *str)
 {
-	if (s && f)
+	int i;
+
+	i = 0;
+	if (str[i] == '-')
+		i++;
+	while (str[i])
 	{
-		while (*s)
-		{
-			f(s);
-			s++;
-		}
+		if (!ft_isdigit(str[i]))
+			return (0);
+		i++;
 	}
+	return (1);
 }

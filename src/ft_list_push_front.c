@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_list_push_front.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vkannema <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vkannema <vkannema@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 17:19:40 by vkannema          #+#    #+#             */
-/*   Updated: 2016/11/10 17:33:59 by vkannema         ###   ########.fr       */
+/*   Created: 2016/08/23 18:25:39 by vkannema          #+#    #+#             */
+/*   Updated: 2017/04/21 11:29:34 by vkannema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_list_push_front(t_list **begin_list, void *data)
 {
-	if (*alst)
+	t_list *new;
+
+	if (*begin_list)
 	{
-		new->next = *alst;
-		*alst = new;
+		new = ft_create_elem(data);
+		new->next = *begin_list;
+		*begin_list = new;
 	}
-	if (!(*alst))
-		*alst = new;
+	else
+		*begin_list = ft_create_elem(data);
 }
