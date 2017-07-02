@@ -17,7 +17,7 @@ Disclaimer: *Reinventing the wheel is bad, 42 makes us do this just so we can ha
 
 ### What's in it?
 
-As you can see from the [Project instructions][1], there are 4 sections:
+There are 4 sections:
 
 1.  **Libc Functions:** Some of the standard C functions
 2.  **Additional functions:** Functions 42 deems will be useful for later projects
