@@ -11,7 +11,7 @@ My implementation of some of the Standard C Library functions including some add
 * [Example usage](#example-usage)
 
 ### What is libft?
-[Libft][1] is an individual project at [42][2] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
+Libft is an individual project at 42 that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
 
 Disclaimer: *Reinventing the wheel is bad, 42 makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At 42 we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the program.*
 
@@ -22,7 +22,7 @@ As you can see from the [Project instructions][1], there are 4 sections:
 1.  **Libc Functions:** Some of the standard C functions
 2.  **Additional functions:** Functions 42 deems will be useful for later projects
 3.  **Bonus Functions:** Functions 42 deems will be useful for linked list manipulation
-4.  **Personal Functions:** Functions I believe will be useful later. [Documented here][3].
+4.  **Personal Functions:** Functions I believe will be useful later.
 
 Libc functions | Additional functions | Bonus Functions | Personal Functions
 :----------- | :-----------: | :-----------: | -----------:
@@ -58,8 +58,6 @@ tolower		|
 Notes:
 
 - All the files and functions are namespaced with an **ft** in front. It stands for Fourty Two
-- The project instructions require that we put all the source files in the root directory but for the sake of this Github repo, I separate them into sub folders.
-- I update this list almost every month with new personal functions. If you don't know what a function does, refer to the [Wiki][3], where I document all my personal functions.
 
 My code is not the best, but it passed all the 42 tests successfully.
 
@@ -91,7 +89,7 @@ That's it. Now run it using `./a.out`
 
 ### How do I test it? How do I test my own implementations?
 
-To test the code we're going to be using @alelievr's [Libft Unit Test][4]. There are [some][5] [good][6] [others][7] but I'll only be covering this one.
+To test the code we're going to be using @alelievr's [Libft Unit Test][1].
 
 #### 1. To test the code in this repo
 
@@ -114,4 +112,8 @@ To test the code we're going to be using @alelievr's [Libft Unit Test][4]. There
 
 If you did everything correctly you should get a cool list of tests showing you the function names and if they passed or not.
 
-That's it! If you're having some problems, just [send me a tweet][8]. If you think your problem is due to my code or this README, [create a new issue][9]. I'll definitely check it out.
+That's it! If you're having some problems, just [send me a tweet][2]. If you think your problem is due to my code or this README, [create a new issue][3]. I'll definitely check it out.
+
+[1]: https://github.com/alelievr/libft-unit-test
+[2]: https://twitter.com/kannemacher
+[3]: https://github.com/vkannema/libft/issues
