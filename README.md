@@ -27,20 +27,20 @@ As you can see from the [Project instructions][1], there are 4 sections:
 Libc functions | Additional functions | Bonus Functions | Personal Functions
 :----------- | :-----------: | :-----------: | -----------:
 memset		| ft_memalloc	| ft_lstnew		| ft_capitalize
-bzero		| ft_memdel		| ft_lstdelone	| ft_countwords
-memcpy		| ft_strnew		| ft_lstdel		| ft_islower
-memccpy		| ft_strdel		| ft_lstadd		| ft_isupper
-memmove		| ft_strclr		| ft_lstiter	| ft_strndup
-memchr		| ft_striter	| ft_lstmap		| ft_lst_reverse
-memcmp		| ft_striteri	|				| ft_realloc
-strlen		| ft_strmap		|				| ft_strjoinch
-strdup		| ft_strmapi	|				| ft_strnchr
-strcpy		| ft_strequ		|				| ft_copyuntil
+bzero		| ft_memdel		| ft_lstdelone	| ft_create_elem
+memcpy		| ft_strnew		| ft_lstdel		| ft_free_join
+memccpy		| ft_strdel		| ft_lstadd		| ft_isdigit_str
+memmove		| ft_strclr		| ft_lstiter	| ft_iswhitespace
+memchr		| ft_striter	| ft_lstmap		| ft_itoa
+memcmp		| ft_striteri	|				| ft_list_push_back
+strlen		| ft_strmap		|				| ft_list_push_front
+strdup		| ft_strmapi	|				| ft_lstrev
+strcpy		| ft_strequ		|				| ft_split_whitespaces
 strncpy		| ft_strnequ	|			| [ft_printf functions][4]
-strcat		| ft_strsub		| | ft_intlen
-strlcat		| ft_strjoin	| | ft_strendswith
-strchr		| ft_strtrim	| | ft_pathjoin
-strrchr		| ft_strsplit	| | ft_lstaddback
+strcat		| ft_strsub		| | ft_strplitdel
+strlcat		| ft_strjoin	| | [get_next_line][5]
+strchr		| ft_strtrim	| | 
+strrchr		| ft_strsplit	| | 
 strstr		| ft_itoa		|
 strnstr		| ft_putchar	|
 strcmp		| ft_putstr		|
@@ -57,7 +57,7 @@ tolower		|
 
 Notes:
 
-- All the files and functions are namespaced with an **ft** in front. It stands for Fourty Two
+- A lot of the files and functions are namespaced with an **ft** in front. It stands for Fourty Two
 
 My code is not the best, but it passed all the 42 tests successfully.
 
@@ -118,3 +118,4 @@ That's it! If you're having some problems, just [send me a tweet][2]. If you thi
 [2]: https://twitter.com/kannemacher
 [3]: https://github.com/vkannema/libft/issues
 [4]: https://github.com/vkannema/ft_printf
+[5]: https://github.com/vkannema/GNL
